@@ -1,15 +1,16 @@
+# Aplicación de notas de texto
+
 # PROYECTO2-BackEnd
 API que permite publicar notas privadas de texto y categorizarlas
 
 # Aplicación de notas de texto
-
 Este ejercicio consiste en crear una API que permita publicar notas privadas de texto y sus categorías.
 
 ## Instalar
-- Crear una base de datos vacía en una instancia de MySQL local. (revisar)
-- Guardar el archivo `.env.example` como `.env` y cubrir los datos necesarios.(revisar)
-- Ejecutar `npm run initDB` para crear las tablas necesarias en la base de datos anteriormente creada. (revisar)
-- Ejecutar `npm run dev` o `npm start` para lanzar el servidor.(revisar)
+- Crear una base de datos vacía en una instancia de MySQL local. 
+- Guardar el archivo `.env.example` como `.env` y cubrir los datos necesarios.
+- Ejecutar `npm run initDB` para crear las tablas necesarias en la base de datos anteriormente creada. 
+- Ejecutar `npm run dev` o `npm start` para lanzar el servidor.
 
 ## Entidades
 
@@ -18,15 +19,38 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - email
   - password
 
-  Registro:
+  Registro de usuarios:
   - email
   - password
 
+  Notas de texto:
+  - idUser
+  - Título, 
+  - Texto 
+  - Categoría única (fijas)
+  - URL de la nota
+  - createdNote
+  - modifiedNote: : título,texto y categoría.
+  - Nota pública 
+  - Nota privada
+- Imagen: poder asociar una imagen(única) a cada nota.
+
+##Endpoints
+
 Usuarios registrado:
-- GET [/nota] - Ver su listado de notas, (solo títulos) 
-- FALTA [/nota] - Visualizar nota
+- POST [/users] - Registro de usuario
+- GET [/users/:id] - Devuelve información del usuario.
+- GET [/users] - Devuelve información del usuario del token (necesita cabecera con token)
+- POST [/anonimo] - Login de usuario (devuelve token)
+- POST [/anonimo] - email de usuario (devuelve token)
+- POST [/anonimo] - password de usuario (devuelve token)
+
+Notas: 
 - POST [/nota] - Crear una nota (título, texto y categoría única (fijas)
+- GET [/nota] - Ver listado de notas, (solo títulos) 
+- GET [/nota] - Visualizar nota
 - GET [/nota/:ModNota] - Modificar sus notas: título, texto y categoría.
+
 
 Opcional:
 - GET [/nota/:idNota] - Marcar una nota como pública.
