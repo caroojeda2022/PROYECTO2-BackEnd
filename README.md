@@ -38,16 +38,13 @@ Usuarios:
 - POST [/user] - Password de usuario (devuelve token)
 - POST [/User] - Registro de usuario.
 - GET [/User] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/User] - Diferencia entre "Nota pública" y "Nota privada" según decisión del usuario registrado.
-Cambia el atributo `request` a `true`.
+- GET [/User] - Diferencia entre "Nota pública" y "Nota privada" según decisión del usuario registrado. Cambia el atributo `request` a `true`.
 
 Notas: 
 - POST [/Note] - Crear una nota (título,texto y categoría única (fijas)
-- GET [/Note] - Ver listado de notas, (solo títulos) 
 - GET [/Note] - Ver nota (solo título)
 - GET [/Note] - Modificar sus notas: título, texto y categoría.
-- PUT [/Note] - Marcar una nota privada como pública.
-Cambia el atributo `request` a `true`.
+- PUT [/Note] - Marcar una nota privada como pública. Cambia el atributo `request` a `true`.
 - DELETE [/Note] - Eliminar una nota.
 - POST [/Note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
 
