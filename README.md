@@ -24,7 +24,7 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - email
   - password
 
-  - [Note] - Información de las Notas de texto:
+- [Note] - Información de las Notas de texto:
   - id
   - Título, 
   - Texto 
