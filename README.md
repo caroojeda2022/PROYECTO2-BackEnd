@@ -15,7 +15,7 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
 
 ## Entidades en la base de datos
 
-- [users] - "Anónimo":
+- [Users] - "Anónimo":
   - login
   - email
   - password
