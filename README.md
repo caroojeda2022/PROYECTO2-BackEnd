@@ -27,26 +27,24 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - Texto 
   - URL de la nota
   - createdNote
-  - modifiedNote: título,texto y categoría.
+  - modifyNote: título,texto y categoría.
 - Imagen: poder asociar una imagen(única) a cada nota.
 
 ## Endpoints 
 
 Usuarios:
-- POST [/user] - Login de usuario (devuelve token)
-- POST [/user] - Email de usuario (devuelve token)
-- POST [/user] - Password de usuario (devuelve token)
-- POST [/User] - Registro de usuario.
-- GET [/User] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/User] - Diferencia entre "Nota pública" y "Nota privada" según decisión del usuario registrado. Cambia el atributo `request` a `true`.
+- POST [/user] - Login de usuario (devuelve token)                                             (loginUser)
+- POST [/user] - Email de usuario (devuelve token)                                             (getUser)
+- POST [/user] - Password de usuario (devuelve token)                                          (getOwnUser)
+- POST [/User] - Registro de usuario.                                                          (newUser)
 
 Notas: 
-- POST [/Note] - Crear una nota (título,texto y categoría única (fijas)
-- GET [/Note] - Ver nota (solo título)
-- GET [/Note] - Modificar sus notas: título, texto y categoría.
-- PUT [/Note] - Marcar una nota privada como pública. Cambia el atributo `request` a `true`.
-- DELETE [/Note] - Eliminar una nota.
-- POST [/Note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
+- POST [/Note] - Crear una nota (título,texto y categoría única (fijas)                           (newNote.js)
+- GET [/Note] - Ver nota (solo título)                                                            (titleNote.js)
+- GET [/Note] - Modificar sus notas: título, texto y categoría.                                   (modifyNote.js)
+- PUT [/Note] - Marcar nota privada a pública, solo usuario resgistrado                           (categoryNote.js)
+ Cambia el atributo `request` a `true`.        
+- DELETE [/Note] - Eliminar una nota.                                                             (deleteNote.js)
 
 Características: 
 - Si una nota es pública puede ser leída por cualquier usuario registrado y logueado en la api.
