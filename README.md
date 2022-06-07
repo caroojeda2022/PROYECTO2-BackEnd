@@ -24,14 +24,14 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - email
   - password
 
-  - [Notes] - Información de las Notas de texto:
+- [Notes] - Información de las Notas de texto:
   - id
   - Título, 
   - Texto 
   - URL de la nota
   - createdNote
   - modifiedNote: título,texto y categoría.
-- Imagen: poder asociar una imagen(única) a cada nota.
+  - Imagen: poder asociar una imagen(única) a cada nota.
 
 ## Endpoints 
 
