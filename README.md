@@ -24,7 +24,7 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - email
   - password
 
-  - [tables] - Información de las Notas de texto:
+  - [Notes] - Información de las Notas de texto:
   - id
   - Título, 
   - Texto 
@@ -36,28 +36,28 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
 ## Endpoints 
 
 Usuarios anonimos:
-- POST [/anonimo] - Login de usuario (devuelve token)
-- POST [/anonimo] - email de usuario (devuelve token)
-- POST [/anonimo] - password de usuario (devuelve token)
+- POST [/users] - Login de usuario (devuelve token)
+- POST [/users] - email de usuario (devuelve token)
+- POST [/users] - password de usuario (devuelve token)
 
 Usuarios registrado:
-- POST [/user] - Registro de usuario.
-- GET [/user] - Devuelve información del usuario.
-- GET [/user] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/user] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
+- POST [/idUsers] - Registro de usuario.
+- GET [/idUsers] - Devuelve información del usuario.
+- GET [/idUsers] - Devuelve información del usuario del token (necesita cabecera con token)
+- GET [/idUsers] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
 Cambia el atributo `request` a `true`.
-- GET [/user] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
+- GET [/idUsers] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
 Cambia el atributo `request` a `true`.
 
 Notas: 
-- POST [/note] - Crear una nota (título,texto y categoría única (fijas)
-- GET [/note] - Ver listado de notas, (solo títulos) 
-- GET [/note] - Ver nota (solo título)
-- GET [/note] - Modificar sus notas: título, texto y categoría.
-- PUT [/note] - Marcar una nota privada como pública.
+- POST [/Note] - Crear una nota (título,texto y categoría única (fijas)
+- GET [/Note] - Ver listado de notas, (solo títulos) 
+- GET [/Note] - Ver nota (solo título)
+- GET [/Note] - Modificar sus notas: título, texto y categoría.
+- PUT [/Note] - Marcar una nota privada como pública.
 Cambia el atributo `request` a `true`.
-- DELETE [/note] - Eliminar una nota.
-- POST [/note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
+- DELETE [/Note] - Eliminar una nota.
+- POST [/Note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
 
 - Si una nota es pública puede ser leída por cualquier usuario registrado y logueado en la api.
 - Las notas públicas solo se pueden acceder si conoce la URL.
