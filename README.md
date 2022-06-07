@@ -41,23 +41,23 @@ Usuarios anonimos:
 - POST [/anonimo] - password de usuario (devuelve token)
 
 Usuarios registrado:
-- POST [/users] - Registro de usuario.
-- GET [/users] - Devuelve información del usuario.
-- GET [/users] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/users] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
+- POST [/user] - Registro de usuario.
+- GET [/user] - Devuelve información del usuario.
+- GET [/user] - Devuelve información del usuario del token (necesita cabecera con token)
+- GET [/user] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
 Cambia el atributo `request` a `true`.
-- GET [/users] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
+- GET [/user] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
 Cambia el atributo `request` a `true`.
 
 Notas: 
-- POST [/nota] - Crear una nota (título,texto y categoría única (fijas)
-- GET [/nota] - Ver listado de notas, (solo títulos) 
-- GET [/nota] - Ver nota (solo título)
-- GET [/nota] - Modificar sus notas: título, texto y categoría.
-- PUT [/nota] - Marcar una nota privada como pública.
+- POST [/note] - Crear una nota (título,texto y categoría única (fijas)
+- GET [/note] - Ver listado de notas, (solo títulos) 
+- GET [/note] - Ver nota (solo título)
+- GET [/note] - Modificar sus notas: título, texto y categoría.
+- PUT [/note] - Marcar una nota privada como pública.
 Cambia el atributo `request` a `true`.
-- DELETE [/nota] - Eliminar una nota.
-- POST [/nota] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
+- DELETE [/note] - Eliminar una nota.
+- POST [/note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
 
 - Si una nota es pública puede ser leída por cualquier usuario registrado y logueado en la api.
 - Las notas públicas solo se pueden acceder si conoce la URL.
