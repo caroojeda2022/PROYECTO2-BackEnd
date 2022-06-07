@@ -20,7 +20,7 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
   - email
   - password
 
-- [idUser] - Registro de usuarios:
+- [idUser] - Registro de usuarios (funciona como tipo administrador?):
   - email
   - password
 
@@ -59,6 +59,7 @@ Cambia el atributo `request` a `true`.
 - DELETE [/Note] - Eliminar una nota.
 - POST [/Note] - Permite crear, editar y borrar categorías (titulo, texto y categoría única (fijas) con token)
 
+Características: 
 - Si una nota es pública puede ser leída por cualquier usuario registrado y logueado en la api.
 - Las notas públicas solo se pueden acceder si conoce la URL.
 
