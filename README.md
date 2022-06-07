@@ -42,7 +42,7 @@ Notas:
 - POST [/Note] - Crear una nota (título,texto y categoría única (fijas)                           (newNote.js)
 - GET [/Note] - Ver nota (solo título)                                                            (titleNote.js)
 - GET [/Note] - Modificar sus notas: título, texto y categoría.                                   (modifyNote.js)
-- PUT [/Note] - Marcar nota privada a pública, solo usuario resgistrado                           (categoryNote.js)
+- POST [/Note] - Marcar nota privada a pública, solo usuario resgistrado                           (categoryNote.js)
  Cambia el atributo `request` a `true`.        
 - DELETE [/Note] - Eliminar una nota.                                                             (deleteNote.js)
 
