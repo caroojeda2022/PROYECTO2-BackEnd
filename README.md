@@ -15,7 +15,8 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
 
 ## Entidades en la base de datos
 
-- [User] - Puede ser de tipo "Anónimo" o Usuario registrado (funciona como tipo administrador? único que puede cambiar estatus de las notas de privadas a públicas)
+- [User] - Puede ser de tipo "Anónimo" o Usuario registrado (funciona como tipo administrador? 
+único que puede cambiar estatus de las notas de privadas a públicas)
   - login
   - email
   - password
@@ -31,16 +32,13 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
 
 ## Endpoints 
 
-Usuarios anonimos:
+Usuarios:
 - POST [/user] - Login de usuario (devuelve token)
-- POST [/user] - email de usuario (devuelve token)
-- POST [/user] - password de usuario (devuelve token)
-
-Usuarios registrado:
+- POST [/user] - Email de usuario (devuelve token)
+- POST [/user] - Password de usuario (devuelve token)
 - POST [/User] - Registro de usuario.
-- GET [/User] - Devuelve información del usuario.
 - GET [/User] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/User] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario registrado.
+- GET [/User] - Diferencia entre "Nota pública" y "Nota privada" según decisión del usuario registrado.
 Cambia el atributo `request` a `true`.
 
 Notas: 
