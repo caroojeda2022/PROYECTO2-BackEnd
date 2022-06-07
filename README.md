@@ -15,38 +15,38 @@ Este ejercicio consiste en crear una API que permita publicar notas privadas de 
 
 ## Entidades en la base de datos
 
-- [Users] - "Anónimo":
+- [User] - "Anónimo":
   - login
   - email
   - password
 
-- [idUsers] - Registro de usuarios:
+- [idUser] - Registro de usuarios:
   - email
   - password
 
-- [Notes] - Información de las Notas de texto:
+  - [Note] - Información de las Notas de texto:
   - id
   - Título, 
   - Texto 
   - URL de la nota
   - createdNote
   - modifiedNote: título,texto y categoría.
-  - Imagen: poder asociar una imagen(única) a cada nota.
+- Imagen: poder asociar una imagen(única) a cada nota.
 
 ## Endpoints 
 
 Usuarios anonimos:
-- POST [/users] - Login de usuario (devuelve token)
-- POST [/users] - email de usuario (devuelve token)
-- POST [/users] - password de usuario (devuelve token)
+- POST [/user] - Login de usuario (devuelve token)
+- POST [/user] - email de usuario (devuelve token)
+- POST [/user] - password de usuario (devuelve token)
 
 Usuarios registrado:
-- POST [/idUsers] - Registro de usuario.
-- GET [/idUsers] - Devuelve información del usuario.
-- GET [/idUsers] - Devuelve información del usuario del token (necesita cabecera con token)
-- GET [/idUsers] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
+- POST [/idUser] - Registro de usuario.
+- GET [/idUser] - Devuelve información del usuario.
+- GET [/idUser] - Devuelve información del usuario del token (necesita cabecera con token)
+- GET [/idUser] Se diferencia entre "Nota pública" y "Nota privada" según decisión del usuario, por defecto las notas son privadas.
 Cambia el atributo `request` a `true`.
-- GET [/idUsers] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
+- GET [/idUser] Por defecto todas las notas son privadas,solo pueden ser verificadas por su creador,
 Cambia el atributo `request` a `true`.
 
 Notas: 
@@ -61,3 +61,4 @@ Cambia el atributo `request` a `true`.
 
 - Si una nota es pública puede ser leída por cualquier usuario registrado y logueado en la api.
 - Las notas públicas solo se pueden acceder si conoce la URL.
+
